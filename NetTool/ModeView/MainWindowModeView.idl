@@ -1,0 +1,8 @@
+namespace NetTool
+{
+	[default_interface]
+	runtimeclass MainWindowModeView : Windows.UI.Xaml.Data.INotifyPropertyChanged
+	{
+		MainWindowModeView();
+	}
+}
