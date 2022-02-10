@@ -1,0 +1,9 @@
+﻿namespace NetTool
+{
+	[default_interface]
+	runtimeclass HistoryInfo
+	{
+		HistoryInfo();
+		String Type;
+	}
+}

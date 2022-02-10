@@ -42,5 +42,6 @@ App::App()
 void App::OnLaunched(LaunchActivatedEventArgs const&)
 {
     window = make<MainWindow>();
+    window.Title(L"NetTool");
     window.Activate();
 }

@@ -1,0 +1,11 @@
+﻿import "HistoryInfo.idl";
+
+namespace NetTool
+{
+	[default_interface]
+	runtimeclass HistoryPageViewMode : Windows.UI.Xaml.Data.INotifyPropertyChanged
+	{
+		HistoryPageViewMode();
+		Windows.Foundation.Collections.IObservableVector<HistoryInfo> Historys{ get; };
+	}
+}

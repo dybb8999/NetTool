@@ -5,25 +5,55 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xaml" />
+    <Page Include="HistoryPage.xaml">
+      <Filter>Pages</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="App.idl" />
     <Midl Include="MainWindow.idl" />
-    <Midl Include="ModeView\MainWindowModeView.idl">
-      <Filter>ModeView</Filter>
+    <Midl Include="ViewMode\HistoryPageViewMode.idl">
+      <Filter>ViewMode</Filter>
+    </Midl>
+    <Midl Include="ViewMode\MainWindowViewMode.idl">
+      <Filter>ViewMode</Filter>
+    </Midl>
+    <Midl Include="HistoryInfo.idl">
+      <Filter>Info</Filter>
+    </Midl>
+    <Midl Include="ValueConverter\HistoryPage\HistoryPageVisiblityConverter.idl">
+      <Filter>ValueConverter\HistoryPage</Filter>
     </Midl>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="ModeView\MainWindowModeView.cpp">
-      <Filter>ModeView</Filter>
+    <ClCompile Include="ViewMode\HistoryPageViewMode.cpp">
+      <Filter>ViewMode</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewMode\MainWindowViewMode.cpp">
+      <Filter>ViewMode</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryInfo.cpp">
+      <Filter>Info</Filter>
+    </ClCompile>
+    <ClCompile Include="ValueConverter\HistoryPage\ValueConverter.HistoryPage.VisiblityConverter.cpp">
+      <Filter>ValueConverter\HistoryPage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="ModeView\MainWindowModeView.h">
-      <Filter>ModeView</Filter>
+    <ClInclude Include="ViewMode\HistoryPageViewMode.h">
+      <Filter>ViewMode</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewMode\MainWindowViewMode.h">
+      <Filter>ViewMode</Filter>
+    </ClInclude>
+    <ClInclude Include="HistoryInfo.h">
+      <Filter>Info</Filter>
+    </ClInclude>
+    <ClInclude Include="ValueConverter\HistoryPage\ValueConverter.HistoryPage.VisiblityConverter.h">
+      <Filter>ValueConverter\HistoryPage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -53,8 +83,20 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{a9cf3293-bbc4-4393-9b17-f1a93c9bbbdd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ModeView">
+    <Filter Include="Pages">
+      <UniqueIdentifier>{f60b716c-32b2-4cfb-92ef-7f4189a3c03d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewMode">
       <UniqueIdentifier>{f64b5e98-5796-460e-bfa5-5cd638f9c9f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Info">
+      <UniqueIdentifier>{25f3fefc-2ee7-4750-901b-a1f069056dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ValueConverter">
+      <UniqueIdentifier>{7904c8dd-b399-47f2-ac22-547899981143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ValueConverter\HistoryPage">
+      <UniqueIdentifier>{58db3f98-2dfd-4fd0-b02a-90805188c2c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -65,5 +107,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
 </Project>

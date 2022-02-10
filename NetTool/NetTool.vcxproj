@@ -102,7 +102,11 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ModeView\MainWindowModeView.h" />
+    <ClInclude Include="HistoryInfo.h" />
+    <ClInclude Include="HistoryPage.xaml.h">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -110,13 +114,23 @@
     <ClInclude Include="MainWindow.xaml.h">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="ValueConverter\HistoryPage\ValueConverter.HistoryPage.VisiblityConverter.h" />
+    <ClInclude Include="ViewMode\HistoryPageViewMode.h" />
+    <ClInclude Include="ViewMode\MainWindowViewMode.h" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
+    <Page Include="HistoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ModeView\MainWindowModeView.cpp" />
+    <ClCompile Include="HistoryInfo.cpp" />
+    <ClCompile Include="HistoryPage.xaml.cpp">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -127,17 +141,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="ValueConverter\HistoryPage\ValueConverter.HistoryPage.VisiblityConverter.cpp" />
+    <ClCompile Include="ViewMode\HistoryPageViewMode.cpp" />
+    <ClCompile Include="ViewMode\MainWindowViewMode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="App.idl">
       <SubType>Code</SubType>
       <DependentUpon>App.xaml</DependentUpon>
     </Midl>
+    <Midl Include="HistoryInfo.idl" />
+    <Midl Include="HistoryPage.idl">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
     <Midl Include="MainWindow.idl">
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Midl>
-    <Midl Include="ModeView\MainWindowModeView.idl" />
+    <Midl Include="ValueConverter\HistoryPage\HistoryPageVisiblityConverter.idl" />
+    <Midl Include="ViewMode\HistoryPageViewMode.idl" />
+    <Midl Include="ViewMode\MainWindowViewMode.idl" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt">

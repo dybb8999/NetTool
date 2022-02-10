@@ -1,0 +1,15 @@
+﻿namespace NetTool
+{
+	namespace ValueConverter
+	{
+		namespace HistoryPage
+		{
+			[default_interface]
+			runtimeclass VisiblityConverter : Windows.UI.Xaml.Data.IValueConverter
+			{
+				VisiblityConverter();
+			}
+		}
+	}
+
+}

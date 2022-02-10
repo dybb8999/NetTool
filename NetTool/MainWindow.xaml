@@ -8,6 +8,24 @@
     mc:Ignorable="d">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <CommandBar 
+            Grid.Row="0">
+            <AppBarButton 
+                Icon="Add" 
+                Label="添加" 
+                Tag="Add"/>
+        </CommandBar>
+        <Frame 
+            Name="mainFrame"
+            Margin="56,0"
+            Grid.Row="1">
+            <local:HistoryPage/>
+        </Frame>
     </Grid>
+    
 </Window>

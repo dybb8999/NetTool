@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="NetTool.HistoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NetTool"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ValueConverter="using:NetTool.ValueConverter.HistoryPage"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ValueConverter:VisiblityConverter x:Key="VisiblityConverter"/>
+        </ResourceDictionary>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Text="历史"
+            FontSize="24"
+            FontWeight="Bold"
+            Grid.Row="0"/>
+
+        <Grid
+            Grid.Row="1">
+            <ListView
+                Visibility="{Binding Historys.Count, Converter={StaticResource VisiblityConverter}, ConverterParameter=Other}"/>
+            <TextBlock
+                Text="请点击右上角按钮开始吧"
+                FontSize="24"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Visibility="{Binding Historys.Count, Converter={StaticResource VisiblityConverter}, ConverterParameter=Empty}"/>
+        </Grid>
+    </Grid>
+    <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+    </StackPanel>-->
+</Page>

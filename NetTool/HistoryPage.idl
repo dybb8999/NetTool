@@ -1,0 +1,10 @@
+﻿import "ViewMode/HistoryPageViewMode.idl";
+
+namespace NetTool
+{
+    [default_interface]
+    runtimeclass HistoryPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        HistoryPage();
+    }
+}
