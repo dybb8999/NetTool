@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
-#include "HistoryPage.xaml.h"
-#if __has_include("HistoryPage.g.cpp")
-#include "HistoryPage.g.cpp"
+#include "SettingPage.xaml.h"
+#if __has_include("SettingPage.g.cpp")
+#include "SettingPage.g.cpp"
 #endif
 
 using namespace winrt;
@@ -12,12 +12,8 @@ using namespace Microsoft::UI::Xaml;
 
 namespace winrt::NetTool::implementation
 {
-    HistoryPage::HistoryPage()
+    SettingPage::SettingPage()
     {
         InitializeComponent();
-        m_viewMode = winrt::make<HistoryPageViewMode>();
-        
-        this->DataContext(m_viewMode);
     }
-
 }

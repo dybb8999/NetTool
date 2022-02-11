@@ -8,6 +8,9 @@
     <Page Include="HistoryPage.xaml">
       <Filter>Pages</Filter>
     </Page>
+    <Page Include="SettingPage.xaml">
+      <Filter>Pages</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="App.idl" />
@@ -23,6 +26,9 @@
     </Midl>
     <Midl Include="ValueConverter\HistoryPage\HistoryPageVisiblityConverter.idl">
       <Filter>ValueConverter\HistoryPage</Filter>
+    </Midl>
+    <Midl Include="SettingPage.idl">
+      <Filter>Pages</Filter>
     </Midl>
   </ItemGroup>
   <ItemGroup>

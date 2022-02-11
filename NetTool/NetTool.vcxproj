@@ -114,6 +114,9 @@
     <ClInclude Include="MainWindow.xaml.h">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="SettingPage.xaml.h">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="ValueConverter\HistoryPage\ValueConverter.HistoryPage.VisiblityConverter.h" />
     <ClInclude Include="ViewMode\HistoryPageViewMode.h" />
     <ClInclude Include="ViewMode\MainWindowViewMode.h" />
@@ -124,6 +127,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml" />
+    <Page Include="SettingPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HistoryInfo.cpp" />
@@ -141,6 +145,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="SettingPage.xaml.cpp">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="ValueConverter\HistoryPage\ValueConverter.HistoryPage.VisiblityConverter.cpp" />
     <ClCompile Include="ViewMode\HistoryPageViewMode.cpp" />
     <ClCompile Include="ViewMode\MainWindowViewMode.cpp" />
@@ -159,6 +166,7 @@
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Midl>
+    <Midl Include="SettingPage.idl" />
     <Midl Include="ValueConverter\HistoryPage\HistoryPageVisiblityConverter.idl" />
     <Midl Include="ViewMode\HistoryPageViewMode.idl" />
     <Midl Include="ViewMode\MainWindowViewMode.idl" />

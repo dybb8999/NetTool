@@ -4,6 +4,9 @@
 #include "MainWindow.g.cpp"
 #endif
 
+#include "SettingPage.xaml.h"
+
+
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
 
@@ -17,8 +20,8 @@ namespace winrt::NetTool::implementation
         InitializeComponent();
     }
 
-    // void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
-    // {
-    //     
-    // }
+    void MainWindow::OnShowSettingPage(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+    {
+        mainFrame().Navigate(xaml_typename<NetTool::SettingPage>(), nullptr, Microsoft::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo(nullptr));
+    }
 }

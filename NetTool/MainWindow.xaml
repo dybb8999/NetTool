@@ -19,6 +19,13 @@
                 Icon="Add" 
                 Label="添加" 
                 Tag="Add"/>
+
+            <AppBarButton
+                Icon="Setting"
+                Label="设置"
+                Tag="Setting"
+                Click="OnShowSettingPage"
+                />
         </CommandBar>
         <Frame 
             Name="mainFrame"
